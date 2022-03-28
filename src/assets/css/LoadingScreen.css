@@ -1,0 +1,111 @@
+.wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #ffb303;
+  flex-direction: column;
+}
+.body {
+  height: 80px;
+  width: 140px;
+  background: #040404;
+  border-radius: 5px;
+  position: relative;
+  animation: animate 0.5s linear infinite;
+}
+.body:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 60px;
+  background: #ffb303;
+  top: -10px;
+  right: -20px;
+  transform: rotate(40deg);
+  border-radius: 0 0 0 50px;
+}
+@keyframes animate {
+  100% {
+    transform: translateY(2px);
+  }
+}
+.body .wheel {
+  height: 40px;
+  width: 40px;
+  background: #000;
+  border: 3px solid #ffb303;
+  position: absolute;
+  border-radius: 50px;
+  margin-left: 50px;
+  bottom: -20px;
+  animation: wheels 0.6s linear infinite;
+}
+.body .wheel:before {
+  position: absolute;
+  content: "";
+  background: #ffb303;
+  height: 5px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.body .wheel:after {
+  position: absolute;
+  content: "";
+  background: #ffb303;
+  height: 5px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+@keyframes wheels {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.body .front {
+  position: absolute;
+  margin: 0 80px;
+}
+.body .back {
+  position: absolute;
+  margin: 0 10px;
+}
+.cover {
+  position: relative;
+  height: 10px;
+  width: 200px;
+  bottom: -15px;
+  overflow: hidden;
+}
+.cover .path {
+  height: 8px;
+  width: 600%;
+  background: #000;
+  position: absolute;
+  animation: path 1.5s linear infinite;
+}
+.path:before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 18px;
+  background: #fff;
+  left: 20%;
+}
+.path:after {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 18px;
+  background: #fff;
+  right: 60%;
+}
+@keyframes path {
+  100% {
+    transform: translateX(-50%);
+  }
+}

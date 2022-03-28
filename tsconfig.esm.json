@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "dist-esm",
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "lib": ["dom", "esnext"],
+    "declaration": false,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "exclude": ["node_modules"]
+}
