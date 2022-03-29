@@ -30,6 +30,18 @@ To build the container, execute the following command with the IP address of you
 docker build -t ase/webapp:latest --build-arg REACT_APP_ASE_ENDPOINT=http://(your ip iddress):8082 .
 ```
 
+## Contributors:
+**Liangda Wang**:
+- src/app/CustomerApp
+- src/app/DelivererApp
+
+**Luoshan Rosan Zheng**:
+- src/app/DispatcherApp
+- Architecture (Routing, File structure, etc.)
+- Component Library
+- Configuration + Setup
+- Dockerfile and build
+
 ## Available Scripts
 
 In the project directory, you can run:
